@@ -1,12 +1,10 @@
 ## Leading Question 
 In our final project we plan to use openFlights data set to find the shortest distance between two airports and the possible paths between all the potential destinations. We plan to create a graph with the data from airports.dat with each node representing an airport. We also plan on using routes.dat which contains the details of the path of each flight which is going to be used to direct the nodes of the graph and each edge has the distance between two places using the latitude and longitude information from airports.dat. We plan to traverse this graph using a DFS traversal algorithm and use A* Search algorithm to find the shortest path between the airports. Lastly, we will use the  Kruskal Algorithm to find the possible paths between all the potential destinations. 
 ## Dataset Acquisition
-
-## Data Format
 We plan to use the data from airport.dat from openFlights which is in the form of a DAT file. This data set contains information regarding each airport's location, timezone, latitude, longitude, etc. In this data set we only plan to use the airport id, latitude and longitude. We plan to use the data from routes.dat from openFlights which is in the form of a DAT file. This file contains information regarding the route each flight takes. From this data set we only plan to use source airport id, destination airport id and stops.
-## Data Correction
+
 We would convert both the DAT files into CSV files as it is easier to select and delete columns and access data in general. In the airport dataset, we would only use the airport ID, latitude, and longitude column and delete the rest. We would have a check to ensure that the latitude and longitude values are valid. These columns don't have any empty entries in the dataset so we would not have to deal with that. Similarly, we would only be using source airport ID, destination airport ID, and stops from routes dataset and we would delete the rest of the data. Also, these columns don't have any empty entries in the dataset so we would not have to deal with that. 
-## Data Storage
+
 As far as the data structure for storing the data we considered a few different solutions. Since we are using a directed graph we initially thought of using an adjacency matrix to store all the data. However, this would be O(N^2) space complexity which is pretty inefficient. The other option was to use an adjacency list which would require less memory. However, we decided to instead create our own classes as it provides more flexibility and allows us to come up with our data structure. There will be a node class which will store the source and information about the airport. The node will also have a vector of a list of edge objects pointing to the various destination airports. It will also include the distance as weights. The space complexity is O(V+E) where V is the vertices and E is the edges.
 
 
