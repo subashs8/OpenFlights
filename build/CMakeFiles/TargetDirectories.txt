@@ -1,0 +1,9 @@
+/workspaces/OpenFlights/build/CMakeFiles/test.dir
+/workspaces/OpenFlights/build/CMakeFiles/main.dir
+/workspaces/OpenFlights/build/CMakeFiles/edit_cache.dir
+/workspaces/OpenFlights/build/CMakeFiles/rebuild_cache.dir
+/workspaces/OpenFlights/build/lib/CMakeFiles/edit_cache.dir
+/workspaces/OpenFlights/build/lib/CMakeFiles/rebuild_cache.dir
+/workspaces/OpenFlights/build/src/CMakeFiles/src.dir
+/workspaces/OpenFlights/build/src/CMakeFiles/edit_cache.dir
+/workspaces/OpenFlights/build/src/CMakeFiles/rebuild_cache.dir
