@@ -15,24 +15,24 @@ using namespace std;
 
 
 
-TEST_CASE("check if map has correct size", "[weight=10][valgrind]"){
-    scanner scan;
-    unordered_map<string, airport> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
-    REQUIRE(temp.size()==23);
+// TEST_CASE("check if map has correct size", "[weight=10][valgrind]"){
+//     scanner scan;
+//     unordered_map<string, airport> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
+//     REQUIRE(temp.size()==23);
 
-}
+// }
 
-TEST_CASE("check if there are no null cases in the data", "[weight=10][valgrind]"){
-    scanner scan;
-    unordered_map<string, airport> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
-    int track =0;
-    for (auto const &pair: temp) {
-         if(pair.first=="\\N"){
-             track=1;
-         }
-     }
-     REQUIRE(track==0);
-}
+// TEST_CASE("check if there are no null cases in the data", "[weight=10][valgrind]"){
+//     scanner scan;
+//     unordered_map<string, airport> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
+//     int track =0;
+//     for (auto const &pair: temp) {
+//          if(pair.first=="\\N"){
+//              track=1;
+//          }
+//      }
+//      REQUIRE(track==0);
+// }
 
 TEST_CASE("check size of routes vector", "[weight=10][valgrind]"){
     scanner scan;

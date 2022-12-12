@@ -12,18 +12,25 @@
 using namespace std;
 
 scanner::scanner() {
-
 }
 
-unordered_map<string, airport> scanner::readAirports(const string &airportdata) {
+map<string, airport*> scanner::readAirports(const string &airportdata) {
     vector<vector<string>> res = read(airportdata);
     clean(res);
-    unordered_map<string, airport> ret;
+    map<string, airport*> hashmap;
     for (size_t i = 0; i < res.size(); i++) {
-        airport temp(res[i][1], res[i][2], res[i][4], stod(res[i][6]), stod(res[i][7]));
-        ret.insert(make_pair(res[i][4], temp));
+        try{
+            airport* temp = new airport(res[i][1], res[i][2], res[i][4], stod(res[i][6]), stod(res[i][7]));
+            hashmap[res[i][4]] = temp;
+        }
+        catch(...){
+            continue;
+        }
+        // cout<< temp->getName() << endl;
+        
+        // cout << ret[res[i][4]].getCity() << endl;
     }
-    return ret;
+    return hashmap;
 }
 
 vector<tuple<string, string>> scanner::readRoutes(const string &routedata) {
@@ -34,6 +41,51 @@ vector<tuple<string, string>> scanner::readRoutes(const string &routedata) {
         ret.push_back(make_tuple(res[i][2], res[i][4]));
     }
     return ret;
+}
+
+vector<vector<pair<string,double>>> scanner::createAdj(const string &routedata) {
+    scanner scan;
+    
+
+    vector<vector<string>> res = read(routedata);
+
+    map<string, airport*> temp2 = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
+
+    clean(res);
+    vector<vector<pair<string,double>>> adj;
+
+
+    vector<bool> check;
+    check.resize(res.size());
+    
+
+    for(unsigned i = 0; i < res.size(); i++){
+
+        if(check[i] == 0){
+            vector<pair<string,double>> temp;
+            temp.push_back(make_pair(res[i][2], 0));
+            adj.push_back(temp);
+            check[i] = 1;
+
+            for(unsigned j = 0; j < res.size(); j++){
+                if(res[i][2] == res[j][2]){
+                    // std::cout << temp2[res[j][4]]->getName() << " "<<temp2[res[j][4]]->getCode() << std::endl;
+                    adj.back().push_back(make_pair(res[j][4], temp2[res[j][2]]->getDist(*temp2[res[j][4]])));
+                    check[j] = 1;
+                }
+            }
+        }
+    }
+
+
+    for(unsigned i = 0; i < adj.size();i++){
+        for(unsigned j = 0; j < adj[i].size();j++){
+            std::cout << adj[i][j].first << " " << adj[i][j].second << "->";
+        }
+        std::cout << std::endl;
+    }
+
+    return adj;
 }
 
  vector<vector<string>> scanner::read(const string & filename) {

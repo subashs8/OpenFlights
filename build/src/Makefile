@@ -155,6 +155,30 @@ airport.cpp.s:
 	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/airport.cpp.s
 .PHONY : airport.cpp.s
 
+floyd.o: floyd.cpp.o
+.PHONY : floyd.o
+
+# target to build an object file
+floyd.cpp.o:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/floyd.cpp.o
+.PHONY : floyd.cpp.o
+
+floyd.i: floyd.cpp.i
+.PHONY : floyd.i
+
+# target to preprocess a source file
+floyd.cpp.i:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/floyd.cpp.i
+.PHONY : floyd.cpp.i
+
+floyd.s: floyd.cpp.s
+.PHONY : floyd.s
+
+# target to generate assembly for a file
+floyd.cpp.s:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/floyd.cpp.s
+.PHONY : floyd.cpp.s
+
 route.o: route.cpp.o
 .PHONY : route.o
 
@@ -203,6 +227,30 @@ scanner.cpp.s:
 	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/scanner.cpp.s
 .PHONY : scanner.cpp.s
 
+traversal.o: traversal.cpp.o
+.PHONY : traversal.o
+
+# target to build an object file
+traversal.cpp.o:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/traversal.cpp.o
+.PHONY : traversal.cpp.o
+
+traversal.i: traversal.cpp.i
+.PHONY : traversal.i
+
+# target to preprocess a source file
+traversal.cpp.i:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/traversal.cpp.i
+.PHONY : traversal.cpp.i
+
+traversal.s: traversal.cpp.s
+.PHONY : traversal.s
+
+# target to generate assembly for a file
+traversal.cpp.s:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/traversal.cpp.s
+.PHONY : traversal.cpp.s
+
 utils.o: utils.cpp.o
 .PHONY : utils.o
 
@@ -239,12 +287,18 @@ help:
 	@echo "... airport.o"
 	@echo "... airport.i"
 	@echo "... airport.s"
+	@echo "... floyd.o"
+	@echo "... floyd.i"
+	@echo "... floyd.s"
 	@echo "... route.o"
 	@echo "... route.i"
 	@echo "... route.s"
 	@echo "... scanner.o"
 	@echo "... scanner.i"
 	@echo "... scanner.s"
+	@echo "... traversal.o"
+	@echo "... traversal.i"
+	@echo "... traversal.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
