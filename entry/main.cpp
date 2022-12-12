@@ -24,24 +24,14 @@ void printPath(vector<string>& path)
 
 int main() {
  
-    int V = 4;
-    vector<vector<int>> grsdaaph = {{0,3,MAX,7}, {8,0,2,MAX},{5,MAX,0,1}, {2,MAX,MAX, 0}};
+ 
     scanner scan;
     vector<vector<pair<string, double>>> graph = scan.createAdj("/workspaces/OpenFlights/lib/routes.csv");
-
-    // Function to initialise the
-    // distance and Next array
     floyd f;
     f.adjtomat(graph);
     f.init();
-    // Calling Floyd Warshall Algorithm,
-    // this will update the shortest
-    // distance as well as Next array
     f.floydw();
     vector<string> path;
- 
-    // Path from node 1 to 3
-    cout << "Shortest path from 1 to 3: ";
     path = f.createPath("GYD", "MRV");
     printPath(path);
     return 0;
