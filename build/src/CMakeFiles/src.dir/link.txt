@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/DFS.cpp.o CMakeFiles/src.dir/airport.cpp.o CMakeFiles/src.dir/floyd.cpp.o CMakeFiles/src.dir/route.cpp.o CMakeFiles/src.dir/scanner.cpp.o CMakeFiles/src.dir/traversal.cpp.o CMakeFiles/src.dir/utils.cpp.o
-/usr/bin/ranlib libsrc.a
