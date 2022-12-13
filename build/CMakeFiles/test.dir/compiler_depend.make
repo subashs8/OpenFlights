@@ -301,6 +301,7 @@ CMakeFiles/test.dir/tests/tests.cpp.o: ../tests/tests.cpp \
   ../src/scanner.h \
   ../src/airport.h \
   ../src/route.h \
+  ../src/traversal.h \
   ../src/utils.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
@@ -399,6 +400,8 @@ CMakeFiles/test.dir/tests/tests.cpp.o: ../tests/tests.cpp \
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
+
+../src/traversal.h:
 
 /usr/include/c++/11/array:
 

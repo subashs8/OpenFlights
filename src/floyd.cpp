@@ -11,7 +11,11 @@ floyd::floyd() {
     size = 0;
 }
 
-void floyd::adjtomat(vector<vector<pair<string,double>>> graph) {
+unordered_map<string, int> floyd::getIdx() {
+    return idx;
+}
+
+vector<vector<int>> floyd::adjtomat(vector<vector<pair<string,double>>> graph) {
     adj.resize(graph.size());
     for (size_t i = 0; i < graph.size(); i++) {
         vector<int> temp1;
@@ -35,6 +39,7 @@ void floyd::adjtomat(vector<vector<pair<string,double>>> graph) {
             }
         }
     }
+    return adj;
 }
 
 void floyd::init() {

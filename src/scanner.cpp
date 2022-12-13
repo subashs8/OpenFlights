@@ -76,15 +76,6 @@ vector<vector<pair<string,double>>> scanner::createAdj(const string &routedata) 
             }
         }
     }
-
-
-    for(unsigned i = 0; i < adj.size();i++){
-        for(unsigned j = 0; j < adj[i].size();j++){
-            std::cout << adj[i][j].first << " " << adj[i][j].second << "->";
-        }
-        std::cout << std::endl;
-    }
-
     return adj;
 }
 

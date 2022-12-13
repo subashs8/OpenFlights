@@ -69,10 +69,24 @@ include src/CMakeFiles/src.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/src.dir/flags.make
 
+src/CMakeFiles/src.dir/DFS.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/DFS.cpp.o: ../src/DFS.cpp
+src/CMakeFiles/src.dir/DFS.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/src.dir/DFS.cpp.o"
+	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/DFS.cpp.o -MF CMakeFiles/src.dir/DFS.cpp.o.d -o CMakeFiles/src.dir/DFS.cpp.o -c /workspaces/OpenFlights/src/DFS.cpp
+
+src/CMakeFiles/src.dir/DFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/DFS.cpp.i"
+	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/OpenFlights/src/DFS.cpp > CMakeFiles/src.dir/DFS.cpp.i
+
+src/CMakeFiles/src.dir/DFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/DFS.cpp.s"
+	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/OpenFlights/src/DFS.cpp -o CMakeFiles/src.dir/DFS.cpp.s
+
 src/CMakeFiles/src.dir/airport.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/airport.cpp.o: ../src/airport.cpp
 src/CMakeFiles/src.dir/airport.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/src.dir/airport.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/airport.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/airport.cpp.o -MF CMakeFiles/src.dir/airport.cpp.o.d -o CMakeFiles/src.dir/airport.cpp.o -c /workspaces/OpenFlights/src/airport.cpp
 
 src/CMakeFiles/src.dir/airport.cpp.i: cmake_force
@@ -86,7 +100,7 @@ src/CMakeFiles/src.dir/airport.cpp.s: cmake_force
 src/CMakeFiles/src.dir/floyd.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/floyd.cpp.o: ../src/floyd.cpp
 src/CMakeFiles/src.dir/floyd.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/floyd.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/floyd.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/floyd.cpp.o -MF CMakeFiles/src.dir/floyd.cpp.o.d -o CMakeFiles/src.dir/floyd.cpp.o -c /workspaces/OpenFlights/src/floyd.cpp
 
 src/CMakeFiles/src.dir/floyd.cpp.i: cmake_force
@@ -100,7 +114,7 @@ src/CMakeFiles/src.dir/floyd.cpp.s: cmake_force
 src/CMakeFiles/src.dir/route.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/route.cpp.o: ../src/route.cpp
 src/CMakeFiles/src.dir/route.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/route.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/src.dir/route.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/route.cpp.o -MF CMakeFiles/src.dir/route.cpp.o.d -o CMakeFiles/src.dir/route.cpp.o -c /workspaces/OpenFlights/src/route.cpp
 
 src/CMakeFiles/src.dir/route.cpp.i: cmake_force
@@ -114,7 +128,7 @@ src/CMakeFiles/src.dir/route.cpp.s: cmake_force
 src/CMakeFiles/src.dir/scanner.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/scanner.cpp.o: ../src/scanner.cpp
 src/CMakeFiles/src.dir/scanner.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/src.dir/scanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/src.dir/scanner.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/scanner.cpp.o -MF CMakeFiles/src.dir/scanner.cpp.o.d -o CMakeFiles/src.dir/scanner.cpp.o -c /workspaces/OpenFlights/src/scanner.cpp
 
 src/CMakeFiles/src.dir/scanner.cpp.i: cmake_force
@@ -128,7 +142,7 @@ src/CMakeFiles/src.dir/scanner.cpp.s: cmake_force
 src/CMakeFiles/src.dir/traversal.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/traversal.cpp.o: ../src/traversal.cpp
 src/CMakeFiles/src.dir/traversal.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/src.dir/traversal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/traversal.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/traversal.cpp.o -MF CMakeFiles/src.dir/traversal.cpp.o.d -o CMakeFiles/src.dir/traversal.cpp.o -c /workspaces/OpenFlights/src/traversal.cpp
 
 src/CMakeFiles/src.dir/traversal.cpp.i: cmake_force
@@ -142,7 +156,7 @@ src/CMakeFiles/src.dir/traversal.cpp.s: cmake_force
 src/CMakeFiles/src.dir/utils.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/utils.cpp.o: ../src/utils.cpp
 src/CMakeFiles/src.dir/utils.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/src.dir/utils.cpp.o"
 	cd /workspaces/OpenFlights/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/utils.cpp.o -MF CMakeFiles/src.dir/utils.cpp.o.d -o CMakeFiles/src.dir/utils.cpp.o -c /workspaces/OpenFlights/src/utils.cpp
 
 src/CMakeFiles/src.dir/utils.cpp.i: cmake_force
@@ -155,6 +169,7 @@ src/CMakeFiles/src.dir/utils.cpp.s: cmake_force
 
 # Object files for target src
 src_OBJECTS = \
+"CMakeFiles/src.dir/DFS.cpp.o" \
 "CMakeFiles/src.dir/airport.cpp.o" \
 "CMakeFiles/src.dir/floyd.cpp.o" \
 "CMakeFiles/src.dir/route.cpp.o" \
@@ -165,6 +180,7 @@ src_OBJECTS = \
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
+src/libsrc.a: src/CMakeFiles/src.dir/DFS.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/airport.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/floyd.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/route.cpp.o
@@ -173,7 +189,7 @@ src/libsrc.a: src/CMakeFiles/src.dir/traversal.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/utils.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/OpenFlights/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libsrc.a"
 	cd /workspaces/OpenFlights/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /workspaces/OpenFlights/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

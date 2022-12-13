@@ -5,6 +5,7 @@ cmake_policy(SET CMP0009 NEW)
 # src_sources at src/CMakeLists.txt:5 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/OpenFlights/src/*.cpp")
 set(OLD_GLOB
+  "/workspaces/OpenFlights/src/DFS.cpp"
   "/workspaces/OpenFlights/src/airport.cpp"
   "/workspaces/OpenFlights/src/floyd.cpp"
   "/workspaces/OpenFlights/src/route.cpp"

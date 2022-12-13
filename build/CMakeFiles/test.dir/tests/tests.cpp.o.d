@@ -285,6 +285,7 @@ CMakeFiles/test.dir/tests/tests.cpp.o: \
   /workspaces/OpenFlights/src/scanner.h \
   /workspaces/OpenFlights/src/airport.h \
   /workspaces/OpenFlights/src/route.h \
+  /workspaces/OpenFlights/src/traversal.h \
   /workspaces/OpenFlights/src/utils.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/set \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/stl_set.h \

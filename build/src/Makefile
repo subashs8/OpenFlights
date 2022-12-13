@@ -131,6 +131,30 @@ src/fast:
 	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+DFS.o: DFS.cpp.o
+.PHONY : DFS.o
+
+# target to build an object file
+DFS.cpp.o:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DFS.cpp.o
+.PHONY : DFS.cpp.o
+
+DFS.i: DFS.cpp.i
+.PHONY : DFS.i
+
+# target to preprocess a source file
+DFS.cpp.i:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DFS.cpp.i
+.PHONY : DFS.cpp.i
+
+DFS.s: DFS.cpp.s
+.PHONY : DFS.s
+
+# target to generate assembly for a file
+DFS.cpp.s:
+	cd /workspaces/OpenFlights/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DFS.cpp.s
+.PHONY : DFS.cpp.s
+
 airport.o: airport.cpp.o
 .PHONY : airport.o
 
@@ -284,6 +308,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
+	@echo "... DFS.o"
+	@echo "... DFS.i"
+	@echo "... DFS.s"
 	@echo "... airport.o"
 	@echo "... airport.i"
 	@echo "... airport.s"
