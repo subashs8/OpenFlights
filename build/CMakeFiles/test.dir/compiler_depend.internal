@@ -299,6 +299,8 @@ CMakeFiles/test.dir/tests/tests.cpp.o
  /usr/include/c++/11/debug/safe_unordered_container.tcc
  /usr/include/c++/11/debug/safe_local_iterator.h
  /usr/include/c++/11/debug/safe_local_iterator.tcc
+ /workspaces/OpenFlights/src/floyd.h
+ /workspaces/OpenFlights/src/DFS.h
  /workspaces/OpenFlights/src/scanner.h
  /workspaces/OpenFlights/src/airport.h
  /workspaces/OpenFlights/src/route.h

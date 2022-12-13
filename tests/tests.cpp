@@ -5,7 +5,8 @@
 #include <cstdlib>
 #include <map>
 #include <unordered_map>
-
+#include "floyd.h"
+#include "DFS.h"
 #include "scanner.h"
 #include "traversal.h"
 #include "utils.h"
@@ -19,27 +20,15 @@ using namespace std;
 TEST_CASE("check if map has correct size", "[weight=10][valgrind]"){
     scanner scan;
     map<string, airport*> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
-    std::cout << temp.size();
-    REQUIRE(temp.size()==23);
+    REQUIRE(temp.size()==5767);
 
 }
 
-TEST_CASE("check if there are no null cases in the data", "[weight=10][valgrind]"){
-    scanner scan;
-    map<string, airport*> temp = scan.readAirports("/workspaces/OpenFlights/lib/airports.csv");
-    int track =0;
-    for (auto const &pair: temp) {
-         if(pair.first=="\\N"){
-             track=1;
-         }
-     }
-     REQUIRE(track==0);
-}
 
 TEST_CASE("check size of routes vector", "[weight=10][valgrind]"){
     scanner scan;
     vector<tuple<string, string>> temp=scan.readRoutes("/workspaces/OpenFlights/lib/routes.csv");
-    REQUIRE(temp.size()==37);
+    REQUIRE(temp.size()==73);
 }
 
 TEST_CASE("check if there are no null cases in the route vector", "[weight=10][valgrind]"){
@@ -141,4 +130,60 @@ TEST_CASE("a star algorithim test 2", "[weight=10][valgrind]"){
     const vector<string> answer = {"AER","KZN","ASF","MRV"};
 
     REQUIRE(answer == output);
+}
+TEST_CASE("Check if it gives shortest path easy"){
+    vector<vector<pair<string,double>>> temp={{make_pair("a",0),make_pair("b",2)},
+    {make_pair("b",0),make_pair("c",5),make_pair("a",7)},
+    {make_pair("c",0)}};
+
+
+    floyd f;
+    vector<string> path;
+    f.adjtomat(temp);
+    f.init();
+    f.floydw();
+    path = f.createPath("a", "c");
+    vector<string> ans;
+    ans.push_back("a");
+    ans.push_back("b");
+    ans.push_back("c");
+    REQUIRE(ans==path);
+}
+TEST_CASE("Check if it gives shortest path medium"){
+    vector<vector<pair<string,double>>> temp={{make_pair("a",0),make_pair("b",3),make_pair("c",5)},
+    {make_pair("b",0),make_pair("e",4),make_pair("d",5)},
+    {make_pair("c",0),make_pair("e",1)},
+    {make_pair("d",0),make_pair("c",1)},
+    {make_pair("e",0),make_pair("b",1)}};
+    
+    floyd f;
+    vector<string> path;
+f.adjtomat(temp);
+        f.init();
+    f.floydw();
+    path = f.createPath("a", "c");
+    vector<string> ans;
+    ans.push_back("a");
+    ans.push_back("c");
+    REQUIRE(ans==path);
+}
+TEST_CASE("Check if it gives shortest path tricky"){
+    vector<vector<pair<string,double>>> temp={{make_pair("a",0),make_pair("b",3),make_pair("c",10)},
+    {make_pair("b",0),make_pair("e",4),make_pair("d",5)},
+    {make_pair("c",0),make_pair("e",1)},
+    {make_pair("d",0),make_pair("c",1)},
+    {make_pair("e",0),make_pair("b",1)}};
+    
+    floyd f;
+    vector<string> path;
+f.adjtomat(temp);
+        f.init();
+    f.floydw();
+    path = f.createPath("a", "c");
+    vector<string> ans;
+    ans.push_back("a");
+    ans.push_back("b");
+    ans.push_back("d");
+    ans.push_back("c");
+    REQUIRE(ans==path);
 }
